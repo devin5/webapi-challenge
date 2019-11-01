@@ -1,38 +1,21 @@
-# Sprint Challenge: Express and Node.js - Projects & Actions
-
-This challenge allows you to practice the concepts and techniques learned over the past Sprint and apply them in a concrete project. This Sprint explored Building RESTful Web APIs with Express and Node.js, Server-side Routing, Express Middleware & Deployment and Good Practices. In your challenge for this Sprint, you will demonstrate proficiency by creating an Web API using Node.js and Express.
-
-## Instructions
-
-**Read these instructions carefully. Understand exactly what is expected _before_ starting this Sprint Challenge.**
-
-This is an individual assessment. All work must be your own. Your challenge score is a measure of your ability to work independently using the material covered through this sprint. You need to demonstrate proficiency in the concepts and objectives introduced and practiced in preceding days.
-
-You are not allowed to collaborate during the Sprint Challenge. However, you are encouraged to follow the twenty-minute rule and seek support from your Team Lead and Instructor in your cohort help channel on Slack. Your work reflects your proficiency Building RESTful APIs with Node.js and Express; and your command of the concepts and techniques taught during the Express and Node.js, Server-side Routing, Express Middleware & Deployment and Good Practices modules.
-
-You have three hours to complete this challenge. Plan your time accordingly.
-
-## Commits
-
-Commit your code regularly and meaningfully. This helps both you (in case you ever need to return to old code for any number of reasons and your Team Lead).
-
-## Description
-
-In this challenge, create a web API around the following resources: `Projects` and `Actions`.
-
 ## Self-Study/Essay Questions
 
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
+      middleware - router
 
 - [ ] Describe Middleware?
+      functions that execute during the lifecycle of a request to the Express server
 
 - [ ] Describe a Resource?
+      any peaice of data going through our server
 
 - [ ] What can the API return to help clients know if a request was successful?
+      status codes \*(200's)
 
 - [ ] How can we partition our application into sub-applications?
+      Router
 
 ## Project Setup
 
@@ -53,8 +36,6 @@ Follow these steps for completing your project.
 
 ## Database Persistence Helpers
 
-Please read the following before implementing the Minimum Viable Product:
-
 The `/data/helpers` folder includes files you can use to manage the persistence of _project_ and _action_ data. These files are `projectModel.js` and `actionModel.js`. Both files publish the following api, which you can use to store, modify and retrieve each resource:
 
 **All these helper methods return a promise. Please you .then().catch() or async/await**
@@ -67,11 +48,6 @@ The `/data/helpers` folder includes files you can use to manage the persistence 
 The `projectModel.js` helper includes an extra method called `getProjectActions()` that takes a _project id_ as it's only argument and returns a list of all the _actions_ for the _project_.
 
 ## Minimum Viable Product
-
-- [ ] Configure an _npm script_ named _"server"_ that will execute your code using _nodemon_. Make _nodemon_ be a development time dependency only, it shouldn't be deployed to production.
-- [ ] Configure an _npm script_ named _"start"_ that will execute your code using _node_.
-
-Design and build the necessary endpoints to:
 
 - [ ] Perform CRUD operations on _projects_ and _actions_. When adding an action, make sure the `project_id` provided belongs to an existing `project`. If you try to add an action with an `id` of 3 and there is no project with that `id` the database will return an error.
 - [ ] Retrieve the list of actions for a project.
