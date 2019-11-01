@@ -3,19 +3,19 @@
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your Team Lead.
 
 - [ ] Mention two parts of Express that you learned about this week.
-      middleware - router
+      middleware : functions that execute during the lifecycle of a request to the Express server. - router : allows us to break our application down into smaller peices
 
 - [ ] Describe Middleware?
-      functions that execute during the lifecycle of a request to the Express server
+      functions that execute during the lifecycle of a request to the Express server. they can be custom, third party, or even built in
 
 - [ ] Describe a Resource?
-      any peaice of data going through our server
+      any peaice of data going through our server either coming out of out db or coming in
 
 - [ ] What can the API return to help clients know if a request was successful?
-      status codes \*(200's)
+      status codes \*(200's) lets the client know that there responses were succesful
 
 - [ ] How can we partition our application into sub-applications?
-      Router
+      we can divide our index folder into an index, a server, and different outes making our api easier to read and work with
 
 ## Project Setup
 

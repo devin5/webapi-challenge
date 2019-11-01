@@ -67,7 +67,12 @@ router.delete("/:id", (req, res) => {
 router.get("/actions/:project_id", (req, res) => {
   const { project_id } = req.params;
   db.getProjectActions(project_id)
-    .then(actions => res.status(200).json(actions))
+    .then(actions => {
+      if (!actions.length) {
+        return res.status(404).json({ error: "post with id does not exist" });
+      }
+      res.status(200).json(actions);
+    })
     .catch(err => {
       console.log(err);
       res
